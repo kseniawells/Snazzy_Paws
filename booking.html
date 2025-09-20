@@ -1,0 +1,113 @@
+<!------ BIT607 Assessment 2        Ksenia Wells        4304810 ------>
+
+<!doctype html>
+<html lang="en-NZ">
+<head>
+  <!-- Set character encoding to display text -->
+  <meta charset="utf-8">
+
+  <!-- Entered for a responsive page and to scale on mobile or desktop -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <<!-- The title browser tab -->
+  <title>Snazzy Paws Grooming | Booking</title>
+
+  <!-- Link to minified CSS file  -->
+  <link rel="stylesheet" href="css/styles.min.css">
+</head>
+<body>
+  <!-- "Skip link" jumps to main content for accessibility -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!------ HEADER SECTION that has the logo, Site name and nav links ------>
+  <header>
+    <!-- Use of container keeps the content centered and set a maximum width -->
+    <div class="container header-bar">
+
+        <!------ NAVIGATION ------>
+      <!-- aria-label="Primary" describes nav for screen readers for accessibility -->
+      <nav aria-label="Primary" class="site-nav">
+
+        <!-- Logo is a clickable link back to home page -->
+        <a class="brand-logo" href="index.html">
+
+            <!-- The logo image has alt text for accessibility -->
+          <img src="images/logo.png" alt="Snazzy Paws Grooming logo" class="logo">
+        </a>
+
+        <!-- Snazzy Paws Grooming text in naavigation as required in the assessment brief -->
+        <span class="brand-text">Snazzy Paws Grooming</span>
+
+        <!------ NAVIGATION LINKS ------>
+        <ul class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <!-- aria-current="page" to tell screen readers this is the current page for accessibility -->
+          <li><a href="booking.html" aria-current="page">Booking</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!------ MAIN CONTENT ------>
+  <!-- The id="main" connects to the skip link above, this is where it would skip to -->
+  <main id="main">
+
+    <!------ HERO BANNER for Booking------>
+    <!-- "../images/" goes up one folder to find the image -->
+    <section class="hero-cover"
+             style="--hero: url('../images/booking-hero.jpg');"
+             aria-label="Booking banner">
+    </section>
+
+    <!------ BOOKING FORM SECTION ------>
+    <!-- The form is currently non functional as per assessment requirements -->
+    <section class="container" id="booking">
+      <!-- Main heading (h1) as required in the assessment brief -->
+      <h1>Request a Booking</h1>
+
+      <!-- Booking Text -->
+      <p id="booking-help">All fields are required. We’ll email you to confirm a time.</p>
+
+      <!-- Booking form -->
+      <!-- "#" as the form is not required to submit -->
+      <!-- "novalidate" to control fields manually and disable automatic browser validation -->
+      <form action="#" method="post" aria-describedby="booking-help" novalidate>
+        
+        <!-- Each input with a label for accessibility -->
+        <label for="owner-name">Owner’s name</label>
+        <input id="owner-name" name="owner_name" type="text" autocomplete="name" required>
+
+        <label for="owner-email">Email address</label>
+        <input id="owner-email" name="owner_email" type="email" autocomplete="email" required>
+
+        <label for="dog-name">Dog’s name</label>
+        <input id="dog-name" name="dog_name" type="text" autocomplete="off" required>
+
+        <label for="dog-breed">Breed</label>
+        <input id="dog-breed" name="dog_breed" type="text" autocomplete="off" required>
+
+        <!-- Age input with number type -->
+        <!-- min and max values to prevent invalid age entry -->
+        <label for="dog-age">Dog's Age (in years)</label>
+        <input id="dog-age" name="dog_age" type="number" inputmode="numeric" min="0" max="20" required>
+
+        <!-- "Submit booking request" Button (non-functional) -->
+        <!-- Styled to match all other buttons throughout -->
+        <button type="submit">Submit booking request</button>
+      </form>
+    </section>
+  </main>
+
+  <!------ FOOTER ------>
+  <!-- It includes business hours and copyright info as per assessment brief-->
+  <footer>
+    <div class="container">
+      <p><strong>Opening hours</strong> Monday to Saturday, 9 am to 5 pm</p>
+      <p>&copy; 2025 Snazzy Paws Grooming</p>
+    </div>
+  </footer>
+</body>
+</html>
