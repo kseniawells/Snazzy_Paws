@@ -207,3 +207,40 @@ footer { border-top: 1px solid #eee; padding: 16px 0; font-size: .95rem; color: 
   .logo { max-height: 48px; } /* Logo is smaller on small screens */
   .header-bar { padding: 10px 0; } /* LEss space in header */
 }
+
+/* ---------- Mobile fixes ---------- */
+@media (max-width: 720px) {
+  /* Header stacks neatly on small screens */
+  .site-nav {
+    flex-wrap: wrap;             /* Allow wrapping instead of squishing */
+    justify-content: space-between;
+  }
+
+  .site-nav .brand-text {
+    font-size: 1rem;             /* Slightly smaller text */
+    flex: 1 1 100%;              /* Pushes it to its own line if needed */
+    margin-top: 6px;
+  }
+
+  .site-nav .nav {
+    flex: 1 1 100%;              /* Move nav links to a new row */
+    justify-content: center;     /* Center them */
+    flex-wrap: wrap;             /* Allow links to break into 2 rows */
+    gap: 8px;
+    margin-top: 6px;
+  }
+
+  /* Hero image scales better */
+  .hero-cover {
+    min-height: 40vh;            /* Reduce height for mobile */
+    background-position: top center; /* Show top of image first */
+  }
+
+  /* Button sits closer on smaller banners */
+  .hero-cta {
+    top: 10px;
+    padding: 12px 18px;
+    font-size: 0.95rem;
+  }
+}
+
