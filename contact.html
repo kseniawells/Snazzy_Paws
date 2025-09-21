@@ -73,16 +73,18 @@
       <!-- The iframe to embed Google Maps -->
       <!-- aria-label describes the map for accessibility -->
       <!-- descriptive title for screen readers for accessibility-->
-      <div class="map-wrap" aria-label="Map showing our location">
+      <div class="map-wrap">
         <iframe
           class="map-embed"
           src="https://www.google.com/maps?q=Hamilton,+New+Zealand&output=embed"
           loading="lazy"
           allowfullscreen
           referrerpolicy="no-referrer-when-downgrade"
-          title="Google Map - Hamilton, New Zealand"> 
+          title="Google Map - Hamilton, New Zealand"
+          aria-label="Map showing our location">
         </iframe>
       </div>
+
 
       <!-- CONTACT FORM -->
       <!-- "#" as the form is not required to submit -->
