@@ -201,46 +201,55 @@ footer { border-top: 1px solid #eee; padding: 16px 0; font-size: .95rem; color: 
 
 
 
-/* ------ For Responsiveness ------ */
+/* ------ Mobile Responsive Edits ------ */
 /* Extra adjustments for phones */
 @media (max-width: 600px) {
   .logo { max-height: 48px; } /* Logo is smaller on small screens */
   .header-bar { padding: 10px 0; } /* LEss space in header */
 }
 
-/* ---------- Mobile fixes ---------- */
 @media (max-width: 720px) {
   /* Header stacks neatly on small screens */
   .site-nav {
-    flex-wrap: wrap;             /* Allow wrapping instead of squishing */
+    flex-wrap: wrap;
     justify-content: space-between;
   }
 
   .site-nav .brand-text {
-    font-size: 1rem;             /* Slightly smaller text */
-    flex: 1 1 100%;              /* Pushes it to its own line if needed */
+    font-size: 1rem;
+    flex: 1 1 100%;
     margin-top: 6px;
+    text-align: center; /* centers the site name */
   }
 
   .site-nav .nav {
-    flex: 1 1 100%;              /* Move nav links to a new row */
-    justify-content: center;     /* Center them */
-    flex-wrap: wrap;             /* Allow links to break into 2 rows */
+    flex: 1 1 100%;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 8px;
     margin-top: 6px;
   }
 
   /* Hero image scales better */
   .hero-cover {
-    min-height: 40vh;            /* Reduce height for mobile */
-    background-position: top center; /* Show top of image first */
+    min-height: auto;            /* let content decide height */
+    padding: 40px 16px;          /* instead of vh height */
+    background-position: center top;
+    text-align: center;
   }
 
-  /* Button sits closer on smaller banners */
+  /* Hero heading scales with screen size */
+  .hero-cover h1 {
+    font-size: clamp(1.4rem, 6vw, 2rem);
+    line-height: 1.2;
+  }
+
+  /* Button smaller on mobile */
   .hero-cta {
-    top: 10px;
-    padding: 12px 18px;
-    font-size: 0.95rem;
+    top: 0;                      /* no extra vertical offset */
+    padding: 10px 16px;
+    font-size: 0.9rem;
+    margin-top: 12px;
   }
 }
 
