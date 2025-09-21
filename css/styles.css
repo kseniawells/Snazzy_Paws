@@ -217,13 +217,13 @@ footer { border-top: 1px solid #eee; padding: 16px 0; font-size: .95rem; color: 
 @media (max-width: 768px) {
   /* Hero banner resizes consistently */
   .hero-cover {
-  min-height: 200px;          /* smaller fixed height */
-  background-size: contain;   /* fit entire image */
-  background-repeat: no-repeat;
+  min-height: 200px;          /* tighter height so less image gets cut */
+  background-size: cover;     /* fills space edge-to-edge */
   background-position: center top;
   padding: 20px 16px;
   text-align: center;
-}
+  }
+
 
   /* Hero heading scales properly */
   .hero-cover h1 {
