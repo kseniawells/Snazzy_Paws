@@ -207,31 +207,31 @@ footer { border-top: 1px solid #eee; padding: 16px 0; font-size: .95rem; color: 
 
 /* ------ Mobile Responsive Edits ------ */
 
-/* Extra adjustments for phones (smallest screens) */
+/* Adjustments for smallest screen phones */
 @media (max-width: 600px) {
-  .logo { max-height: 48px; } /* smaller logo */
-  .header-bar { padding: 10px 0; } /* less header space */
+  .logo { max-height: 48px; }
+  .header-bar { padding: 10px 0; }
 }
 
-/* Phones & tablets up to 768px wide */
+/* Larger screens and Tablets */
 @media (max-width: 768px) {
-  /* Hero banner resizes consistently */
+  /* Resize hero banner */
   .hero-cover {
-  min-height: 200px;          /* tighter height so less image gets cut */
-  background-size: cover;     /* fills space edge-to-edge */
+  min-height: 200px;
+  background-size: cover;
   background-position: center top;
   padding: 20px 16px;
   text-align: center;
   }
 
 
-  /* Hero heading scales properly */
+  /* Scale hero heading */
   .hero-cover h1 {
     font-size: clamp(1.4rem, 6vw, 2rem);
     line-height: 1.2;
   }
 
-  /* Book Now button adjusts for small screens */
+  /* Book Now button */
   .hero-cta {
     top: 0;
     padding: 10px 16px;
@@ -239,7 +239,7 @@ footer { border-top: 1px solid #eee; padding: 16px 0; font-size: .95rem; color: 
     margin-top: 12px;
   }
 
-  /* Header/nav stack neatly */
+  /* Stack header and navigation*/
   .site-nav {
     flex-wrap: wrap;
     justify-content: center;
