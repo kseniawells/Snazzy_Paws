@@ -75,10 +75,14 @@ nav a[aria-current="page"] { font-weight: 700; }
 /* ------ Hero Banner ------ */
 .hero-cover {
   position: relative;
-  min-height: 60vh;
-  display: flex; justify-content: center; align-items: flex-end; /* Button is at bottom center */
-  background-image: var(--hero, url("../images/home-hero.jpg")); /* Background image */
-  background-size: cover; background-position: center; background-repeat: no-repeat;
+  min-height: 60vh; /* default for desktop */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-image: var(--hero, url("../images/home-hero.jpg"));
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding-bottom: 40px;
 }
 
@@ -202,14 +206,24 @@ footer { border-top: 1px solid #eee; padding: 16px 0; font-size: .95rem; color: 
 
 
 /* ------ Mobile Responsive Edits ------ */
-/* Extra adjustments for phones */
+
+/* Extra adjustments for phones (smallest screens) */
 @media (max-width: 600px) {
-  .logo { max-height: 48px; } /* Logo is smaller on small screens */
-  .header-bar { padding: 10px 0; } /* LEss space in header */
+  .logo { max-height: 48px; } /* smaller logo */
+  .header-bar { padding: 10px 0; } /* less header space */
 }
 
+/* Tablet & small laptop adjustments */
+@media (max-width: 768px) {
+  .hero-cover {
+    min-height: 30vh;   /* smaller hero section */
+    padding-bottom: 20px;
+  }
+}
+
+/* Narrow phone layouts */
 @media (max-width: 720px) {
-  /* Header stacks neatly on small screens */
+  /* Header stacks neatly */
   .site-nav {
     flex-wrap: wrap;
     justify-content: space-between;
@@ -219,7 +233,7 @@ footer { border-top: 1px solid #eee; padding: 16px 0; font-size: .95rem; color: 
     font-size: 1rem;
     flex: 1 1 100%;
     margin-top: 6px;
-    text-align: center; /* centers the site name */
+    text-align: center;
   }
 
   .site-nav .nav {
@@ -232,13 +246,13 @@ footer { border-top: 1px solid #eee; padding: 16px 0; font-size: .95rem; color: 
 
   /* Hero image scales better */
   .hero-cover {
-    min-height: auto;            /* let content decide height */
-    padding: 40px 16px;          /* instead of vh height */
+    min-height: auto;
+    padding: 40px 16px;
     background-position: center top;
     text-align: center;
   }
 
-  /* Hero heading scales with screen size */
+  /* Hero heading scales */
   .hero-cover h1 {
     font-size: clamp(1.4rem, 6vw, 2rem);
     line-height: 1.2;
@@ -246,10 +260,11 @@ footer { border-top: 1px solid #eee; padding: 16px 0; font-size: .95rem; color: 
 
   /* Button smaller on mobile */
   .hero-cta {
-    top: 0;                      /* no extra vertical offset */
+    top: 0;
     padding: 10px 16px;
     font-size: 0.9rem;
     margin-top: 12px;
   }
 }
+
 
