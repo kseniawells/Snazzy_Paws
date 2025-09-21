@@ -19,12 +19,12 @@
   <!-- "Skip link" jumps to main content for accessibility -->
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!------ HEADER SECTION that has the logo, Site name and nav links ------>
+  <!-- HEADER SECTION that has the logo, Site name and nav links -->
   <header>
     <!-- Use of container keeps the content centered and set a maximum width -->
     <div class="container header-bar">
 
-        <!------ NAVIGATION ------>
+        <!-- NAVIGATION -->
       <!-- aria-label="Primary" describes nav for screen readers for accessibility -->
       <nav aria-label="Primary" class="site-nav">
 
@@ -72,14 +72,15 @@
       <!-- MAP SECTION -->
       <!-- The iframe to embed Google Maps -->
       <!-- aria-label describes the map for accessibility -->
+      <!-- descriptive title for screen readers for accessibility-->
       <div class="map-wrap" aria-label="Map showing our location">
         <iframe
           class="map-embed"
           src="https://www.google.com/maps?q=Hamilton,+New+Zealand&output=embed"
-          loading="lazy" <!-- loads only when scrolled into view, improves performance -->
-          allowfullscreen <!-- map can go fullscreen if supported in browser -->
-          referrerpolicy="no-referrer-when-downgrade" <!-- only sends if both sides are secure HTTPS -->
-          title="Google Map - Hamilton, New Zealand"> <!-- descriptive title for screen readers for accessibility-->
+          loading="lazy"
+          allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Google Map - Hamilton, New Zealand"> 
         </iframe>
       </div>
 
